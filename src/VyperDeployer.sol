@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
-import "src/interfaces/FFICheats.sol";
+import "./interfaces/FFICheats.sol";
 
 contract VyperDeployer is Test {
     FFICheats cheatCodes = FFICheats(HEVM_ADDRESS);
