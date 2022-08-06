@@ -2,7 +2,7 @@
 
 <br/>
 <p align="center">
-<img src="./img/vyper-logo.svg" width="225" alt="Vyper logo">
+<img src="./img/vyper-logo.png" width="225" alt="Vyper logo">
 <img src="./img/foundry-logo.png" width="225" alt="Vyper logo">
 </p>
 <br/>
