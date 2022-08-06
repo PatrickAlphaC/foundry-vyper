@@ -39,10 +39,28 @@ The following will need to be installed in order to use this template. Please fo
 forge install PatrickAlphaC/foundry-vyper --no-commit
 ```
 
-2. Use the Vyper Deployer Contract!
+2. Update `remappings.txt`
+
+Either make a `remappings.txt` file or just add the following to it:
 
 ```
+foundry-vyper/=lib/foundry-vyper/src/
+```
 
+3. Use the Vyper Deployer Contract!
+
+```javascript
+import "foundry-vyper/VyperDeployer.sol";
+import "src/interfaces/ISimpleStorage.sol";
+.
+.
+.
+function deploy() public {
+    string vyperSimpleStorageLocation = "src/VSimpleStorage.vy";
+    vyperDeployer = new VyperDeployer();
+    address vyContractAddress = vyperDeployer.deployContract(vyperSimpleStorageLocation);
+    ISimpleStorage simpleStorage = ISimpleStorage(vyContractAddress); 
+}
 ```
 
 # Acknowledgments
