@@ -15,6 +15,7 @@ A package for running, deploying, and working with vyper contracts in a foundry 
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
+    - [Deploying with arguments](#deploying-with-arguments)
 - [Acknowledgments](#acknowledgments)
 
 # Getting Started
@@ -61,6 +62,14 @@ function deploy() public {
     address vyContractAddress = vyperDeployer.deployContract(vyperSimpleStorageLocation);
     ISimpleStorage simpleStorage = ISimpleStorage(vyContractAddress); 
 }
+```
+
+### Deploying with arguments
+
+To deploy with arguments, just abi encode your arguments:
+
+```
+vyperDeployer.deployContract("SimpleStore", abi.encode(1234))
 ```
 
 # Acknowledgments
